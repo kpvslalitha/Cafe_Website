@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cafe </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Californian FB"}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("bg.jpeg");
+  min-height: 100%;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <a href="#" class="w3-bar-item w3-button">HOME</a>
+    <a href="#menu" class="w3-bar-item w3-button">MENU</a>
+    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="#myMap" class="w3-bar-item w3-button">CONTACT</a>
+  </div>
+</div>
+  
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-padding">
+
+  </div>
+  <div class="w3-display-middle w3-center" >
+    <span class="w3-text-white w3-hide-small" style="font-size:100px">A HOT CUP <br> OF HAPPINESS</span>
+    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>A HOT CUP<br>OF COFFEE</b></span>
+
+  </div>
+</header>
+
+<!-- Menu Container -->
+ <center>
+    <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Let me see the menu</a></p></center>
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">THE MENU</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Coffee');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Coffee</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, ' Snacks');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Snacks</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Desserts');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Desserts</div>
+      </a>
+    </div>
+
+    <div id="Coffee" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Cappuccino</b> <span class="w3-right w3-tag w3-dark-grey w3-round">Rs.350</span></h1>
+      <p class="w3-text-grey">Get things done with a dark espresso in thick milk foam(Regular/King)</p>
+      <hr>
+   
+      <h1><b>Soya Cappuccino (Vegan)</b> <span class="w3-right w3-tag w3-dark-grey w3-round">Rs.480</span></h1>
+      <p class="w3-text-grey">Energize your day with steamed soya milk and a shot of espresso(Regular/King)</p>
+      <hr>
+      
+      <h1><b>Hot Velvet Coffee </b> <span class="w3-right w3-tag w3-dark-grey w3-round">Rs.550</span></h1>
+      <p class="w3-text-grey">The trendy and delicious Dalgano coffee in a hot new avatar</p>
+      <hr>
+
+      <h1><b>Filter Coffee(Popular)</b> <span class="w3-right w3-tag w3-dark-grey w3-round">Rs.300</span></h1>
+      <p class="w3-text-grey">Classic South Indian style coffee you can't resist</p>
+      <hr>
+
+      <h1><b>Vanilla Latte(Must Try)</b> <span class="w3-right w3-tag w3-dark-grey w3-round">Rs.450</span></h1>
+      <p class="w3-text-grey">The usual latte goes unusual with a touch of vanilla flavour </p>
+      <hr>
+
+      <h1><b>Lemon Green Coffee</b> <span class="w3-tag w3-grey w3-round">New</span><span class="w3-right w3-tag w3-dark-grey w3-round">Rs.420</span></h1>
+      <p class="w3-text-grey">Rich green coffee with the goodness of antioxidants and lemon</p>
+    </div>
+
+    <div id=" Snacks" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Bread Butter</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">Rs.500</span></h1>
+      <p class="w3-text-grey">Freshly toasted  bread with butter</p>
+      <hr>
+   
+      <h1><b>Marble cakes</b> <span class="w3-right w3-tag w3-dark-grey w3-round">Rs.1000</span></h1>
+      <p class="w3-text-grey">Cake with mixture of vanilla and chocolate cake</p>
+      <hr>
+      
+      <h1><b>Garlic Bread</b> <span class="w3-right w3-tag w3-dark-grey w3-round">Rs.1200</span></h1>
+      <p class="w3-text-grey">Grilled ciabatta, garlic butter, onions</p>
+      <hr>
+
+      <h1><b>Chocolate cake</b> <span class="w3-right w3-tag w3-dark-grey w3-round">Rs.2000</span></h1>
+      <p class="w3-text-grey">Freshly baked cake with cocoa and crunch of chocochips</p>
+    </div>
+
+
+    <div id="Desserts" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Vanilla Muffins<span class="w3-right w3-tag w3-dark-grey w3-round">Rs.1000</span></h1>
+      <p class="w3-text-grey">Tasty and spongy muffin baked with wheat flour</p>
+      <hr>
+   
+      <h1><b>Icecreams</b> <span class="w3-right w3-tag w3-dark-grey w3-round">Rs.350</span></h1>
+      <p class="w3-text-grey">Ask the waiter</p>
+      <hr>
+      
+      <h1><b>Oreo Chocolate Fudge Brownie</b> <span class="w3-right w3-tag w3-dark-grey w3-round">Rs.450</span></h1>
+      <p class="w3-text-grey">Healthy as well as tasty</p>
+      <hr>
+      
+      <h1><b>Belgian Chocolate Mousse</b> <span class="w3-right w3-tag w3-dark-grey w3-round">Rs.850</span></h1>
+      <p class="w3-text-grey">Yummy and Ready to eat</p>
+    </div><br>
+
+  </div>
+</div>
+
+<!-- About Container -->
+<div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
+    <p>The Cafe was founded By Sri Lalitha.</p>    <p><strong>The story began with a simple love for exceptional coffee and a desire to create a warm, inviting space for our community to gather.</strong> 
+    <p>From our baristas to our bakers, our team is dedicated to providing you with an unforgettable cafe experience.</p>
+    <img src="Interior.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
+    <h1><b>Opening Hours</b></h1>
+    
+    <div class="w3-row">
+      <div class="w3-col s6">
+        <p>Monday 10:00am-12:00am </p>
+       <p>Tuesday10:00am-12:00am</p>
+        <p>Wednesday 10:00am - 12:00am</p>
+        <p>Thursday 10:00am - 12:00am</p>
+      </div>
+      <div class="w3-col s6">
+        <p>Friday 10:00am - 11:00pm</p>
+        <p>Saturday 10:00am - 11:00pm</p>
+        <p>Sunday Closed</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="map.jpg" class="w3-image w3-greyscale" style="width:100%;" id="myMap">
+
+<!-- Contact -->
+<div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Contact</h1>
+    <p>Find us at some address at some place or call us at 05050515-122330</p>
+    <p><span class="w3-tag">FYI!</span> We offer full-service  for any event, large or small. We understand your needs and we will cater the Coffee, Snacks, Desserts to satisfy by  both look and taste.</p>
+    <p class="w3-xxlarge"><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-light-grey w3-block" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
