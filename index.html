@@ -160,7 +160,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Californian FB"}
     <p>Find us at some address at some place or call us at 05050515-122330</p>
     <p><span class="w3-tag">FYI!</span> We offer full-service  for any event, large or small. We understand your needs and we will cater the Coffee, Snacks, Desserts to satisfy by  both look and taste.</p>
     <p class="w3-xxlarge"><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
-    <form action="http://34.207.112.185:5000/send-email" method="POST" target="_blank">
+    <form id="contactForm">
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Your Email" required name="Email"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
@@ -189,6 +189,48 @@ function openMenu(evt, menuName) {
   evt.currentTarget.firstElementChild.className += " w3-red";
 }
 document.getElementById("myLink").click();
+</script>
+
+<!-- Toast Message -->
+<div id="toast" class="w3-padding w3-round-large w3-text-white w3-large"
+     style="visibility:hidden; position:fixed; bottom:30px; right:30px; background:#333; z-index:999;">
+</div>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault(); // stop the form from submitting normally
+
+    const formData = new FormData(this);
+    const payload = new URLSearchParams(formData);
+
+    try {
+      const response = await fetch("http://34.207.112.185:5000/send-email", {
+        method: 'POST',
+        body: payload
+      });
+
+      if (response.ok) {
+        showToast("✅ Email sent successfully!");
+        this.reset(); // optional: reset form
+      } else {
+        showToast("❌ Failed to send email.");
+      }
+    } catch (err) {
+      showToast("⚠️ Network error. Please try again.");
+    }
+  });
+
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.style.visibility = 'visible';
+    toast.style.opacity = '1';
+
+    setTimeout(() => {
+      toast.style.opacity = '0';
+      toast.style.visibility = 'hidden';
+    }, 3000); // show toast for 3 seconds
+  }
 </script>
 
 </body>
