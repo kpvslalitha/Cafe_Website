@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   flask-mail:
-    build: .
+    image: kpvslalitha/flask-email-service
     ports:
       - "5000:5000"
     environment:
